@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camila Pelater — Marketing Manager | Búsqueda de nueva oportunidad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F7F4EE;
+    --warm-white: #FDFCF9;
+    --ink: #1A1714;
+    --ink-muted: #5C5650;
+    --ink-light: #9C968E;
+    --accent: #65518C;
+    --accent-light: #EAE4F2;
+    --gold: #B8963E;
+    --border: rgba(26,23,20,0.1);
+    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--warm-white);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* HEADER / HERO */
+  header {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+  }
+
+  .hero-left {
+    background: var(--ink);
+    color: var(--warm-white);
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .hero-left::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    opacity: 0.6;
+  }
+
+  .hero-text {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(52px, 5vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 28px;
+    color: var(--warm-white);
+  }
+
+  h1 em {
+    font-style: italic;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .hero-description {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 300;
+    max-width: 360px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  .hero-cta-row {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+  }
+
+  .btn-primary:hover { background: #55427A; }
+
+  .btn-ghost {
+    display: inline-block;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 2px;
+    transition: all 0.2s;
+  }
+
+  .btn-ghost:hover { color: white; border-color: rgba(255,255,255,0.5); }
+
+  .hero-bottom {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-stat {
+    text-align: left;
+  }
+
+  .hero-stat-num {
+    font-family: var(--font-display);
+    font-size: 28px;
+    color: var(--warm-white);
+  }
+
+  .hero-stat-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255,255,255,0.12);
+  }
+
+  /* HERO RIGHT */
+  .hero-right {
+    background: var(--cream);
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero-right-tag {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 40px;
+  }
+
+  .specialties-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    margin-bottom: 32px;
+    color: var(--ink);
+  }
+
+  .specialty-item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    transition: all 0.2s;
+  }
+
+  .specialty-item:first-of-type { border-top: 1px solid var(--border); }
+
+  .specialty-num {
+    font-family: var(--font-display);
+    font-size: 12px;
+    color: var(--ink-light);
+    font-style: italic;
+    min-width: 24px;
+    padding-top: 2px;
+  }
+
+  .specialty-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .specialty-desc {
+    font-size: 13px;
+    color: var(--ink-muted);
+    margin-top: 2px;
+  }
+
+  .availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    padding: 10px 18px;
+    font-size: 12px;
+    color: var(--ink-muted);
+    margin-top: 40px;
+  }
+
+  .availability-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #4CAF50;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 100px 0;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 3.5vw, 52px);
+    line-height: 1.1;
+    margin-bottom: 60px;
+    color: var(--ink);
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--ink-light);
+  }
+
+  /* ABOUT */
+  .about-section { background: var(--warm-white); padding-bottom: 60px; }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--ink-muted);
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+
+  .about-text strong { color: var(--ink); font-weight: 500; }
+
+  .certifications {
+    margin-top: 40px;
+  }
+
+  .cert-title {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 16px;
+  }
+
+  .cert-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--ink);
+  }
+
+  .cert-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .cert-icon svg { width: 14px; height: 14px; }
+
+  .skills-sidebar { padding-top: 8px; }
+
+  .skill-group { margin-bottom: 20px; }
+
+  .skills-sidebar { padding-top: 8px; padding-bottom: 0; }
+
+  .skill-group-title {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 16px;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skill-tag {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    padding: 7px 14px;
+    font-size: 13px;
+    color: var(--ink);
+    transition: all 0.2s;
+  }
+
+  .skill-tag:hover {
+    background: var(--ink);
+    color: var(--warm-white);
+    border-color: var(--ink);
+  }
+
+  /* EXPERIENCE */
+  .experience-section { background: var(--cream); }
+
+  .experience-list { display: flex; flex-direction: column; gap: 0; }
+
+  .exp-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+    padding: 48px 0;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .exp-item:first-child { border-top: 1px solid var(--border); }
+
+  .exp-meta { }
+
+  .exp-company {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 6px;
+  }
+
+  .exp-period {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-style: italic;
+    color: var(--ink-light);
+  }
+
+  .exp-role {
+    font-family: var(--font-display);
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+
+  .exp-description {
+    font-size: 15px;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* PROJECTS */
+  .projects-section { background: var(--ink); }
+  .projects-section .section-label { color: var(--accent); }
+  .projects-section .section-title { color: var(--warm-white); }
+  .projects-section .section-title em { color: rgba(255,255,255,0.35); }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+  }
+
+  .project-card {
+    background: var(--ink);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+    text-decoration: none;
+    display: block;
+  }
+
+  .project-card:hover { background: #252220; }
+
+  .project-thumb {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    margin-bottom: 24px;
+    display: block;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .project-card:hover .project-thumb { opacity: 1; }
+
+  .project-tag {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+
+  .project-title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    color: var(--warm-white);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .project-views {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 20px;
+  }
+
+  .project-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    margin-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 20px;
+  }
+
+  .metric {
+    text-align: center;
+    padding: 0 8px;
+  }
+
+  .metric:not(:last-child) {
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .metric-num {
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: var(--warm-white);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .metric-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.3;
+  }
+
+  /* BRANDS */
+  .brands-section { background: var(--warm-white); padding-bottom: 100px; }
+
+  .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+  }
+
+  .brand-tile {
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 32px 20px;
+    min-height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background 0.25s ease, color 0.25s ease, font-style 0.25s ease;
+  }
+
+  .brand-tile.is-text {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-muted);
+  }
+
+  .brand-tile.is-text:hover {
+    background: var(--ink);
+    color: var(--warm-white);
+    font-style: normal;
+  }
+
+  .brand-tile img {
+    max-width: 100%;
+    max-height: 48px;
+    object-fit: contain;
+    filter: grayscale(1) opacity(0.65);
+    transition: filter 0.3s ease;
+  }
+
+  .brand-tile:hover img {
+    filter: grayscale(0) opacity(1);
+  }
+
+  /* CONTACT */
+  .contact-section { background: var(--cream); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-intro {
+    font-size: 17px;
+    color: var(--ink-muted);
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .contact-links { display: flex; flex-direction: column; gap: 0; }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--ink);
+    transition: all 0.2s;
+  }
+
+  .contact-link:first-child { border-top: 1px solid var(--border); }
+
+  .contact-link:hover { color: var(--accent); }
+
+  .contact-link-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .contact-link-platform {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    min-width: 80px;
+  }
+
+  .contact-link-name {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .contact-arrow {
+    font-size: 18px;
+    color: var(--ink-light);
+    transition: transform 0.2s;
+  }
+
+  .contact-link:hover .contact-arrow { transform: translate(4px, -4px); color: var(--accent); }
+
+  .contact-form-area {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    padding: 40px;
+  }
+
+  .form-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .form-subtitle {
+    font-size: 14px;
+    color: var(--ink-light);
+    margin-bottom: 32px;
+  }
+
+  .form-group { margin-bottom: 20px; }
+
+  .form-label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 8px;
+  }
+
+  .form-input, .form-textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    padding: 12px 16px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--ink);
+    background: var(--cream);
+    outline: none;
+    transition: border-color 0.2s;
+    resize: vertical;
+  }
+
+  .form-input:focus, .form-textarea:focus {
+    border-color: var(--accent);
+    background: white;
+  }
+
+  .form-textarea { min-height: 100px; }
+
+  .form-submit {
+    width: 100%;
+    background: var(--ink);
+    color: var(--warm-white);
+    border: none;
+    padding: 15px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-transform: uppercase;
+  }
+
+  .form-submit:hover { background: var(--accent); }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.4);
+    padding: 32px 0;
+  }
+
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-name {
+    font-family: var(--font-display);
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .footer-copy { font-size: 12px; }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 60px;
+    background: rgba(26,23,20,0.95);
+    transition: background 0.3s, backdrop-filter 0.3s;
+  }
+
+  nav.scrolled {
+    background: rgba(26,23,20,0.95);
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-brand {
+    font-family: var(--font-display);
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: white; }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    header { grid-template-columns: 1fr; }
+    .hero-left, .hero-right { padding: 60px 40px; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .exp-item { grid-template-columns: 1fr; gap: 8px; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .brands-grid { grid-template-columns: repeat(2, 1fr); }
+    .container { padding: 0 40px; }
+    nav { padding: 16px 40px; }
+    .nav-links { display: none; }
+    h1 { font-size: 44px; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <ul class="nav-links">
+    <li><a href="#about">Perfil</a></li>
+    <li><a href="#experience">Experiencia</a></li>
+    <li><a href="#projects">Proyectos</a></li>
+    <li><a href="#brands">Marcas</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header>
+  <div class="hero-left">
+    <div class="nav-logo">Portfolio</div>
+    <div class="hero-text">
+      <p class="hero-label">Marketing Manager · Buenos Aires</p>
+      <h1>Camila<br><em>Pelater.</em></h1>
+      <p class="hero-description">
+        Más de 15 años liderando e implementando estrategias de contenido y marketing digital. Busco sumarme a un equipo dinámico donde aplicar mis habilidades agregando valor y experiencia.
+      </p>
+      <div class="hero-cta-row">
+        <a href="#contact" class="btn-primary">Conectemos</a>
+        <a href="#experience" class="btn-ghost">Ver trayectoria →</a>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <div class="hero-stat">
+        <div class="hero-stat-num">15+</div>
+        <div class="hero-stat-label">Años de experiencia</div>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">15+</div>
+        <div class="hero-stat-label">Marcas gestionadas</div>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-label">Idiomas</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <p class="hero-right-tag">Especialidades</p>
+    <p class="specialties-title">Lo que aporto al equipo</p>
+
+    <div class="specialty-item">
+      <span class="specialty-num">01</span>
+      <div>
+        <div class="specialty-name">Estrategia de marca integral</div>
+        <div class="specialty-desc">Planificación, identidad y voz de marca en todas las plataformas y canales</div>
+      </div>
+    </div>
+    <div class="specialty-item">
+      <span class="specialty-num">02</span>
+      <div>
+        <div class="specialty-name">Paid Media: Meta, Google & TikTok Ads</div>
+        <div class="specialty-desc">Campañas pagas orientadas a resultados y conversión</div>
+      </div>
+    </div>
+    <div class="specialty-item">
+      <span class="specialty-num">03</span>
+      <div>
+        <div class="specialty-name">Creación de contenidos</div>
+        <div class="specialty-desc">Copywriting, storytelling y producción editorial</div>
+      </div>
+    </div>
+    <div class="specialty-item">
+      <span class="specialty-num">04</span>
+      <div>
+        <div class="specialty-name">Coordinación de Agencias</div>
+        <div class="specialty-desc">Seguimiento y control de proveedores y presupuestos</div>
+      </div>
+    </div>
+    <div class="specialty-item">
+      <span class="specialty-num">05</span>
+      <div>
+        <div class="specialty-name">Influencer Marketing</div>
+        <div class="specialty-desc">Contacto con creadores para trabajar en conjunto</div>
+      </div>
+    </div>
+
+    <div class="availability-badge">
+      <span class="availability-dot"></span>
+      Abierta a nuevas oportunidades en relación de dependencia
+    </div>
+
+    <div class="skill-group" style="margin-top: 24px; --cream: var(--warm-white);">
+      <p class="skill-group-title">Roles de interés</p>
+      <div class="skill-tags">
+        <span class="skill-tag">Marketing Manager</span>
+        <span class="skill-tag">Social Media Manager</span>
+        <span class="skill-tag">Marketing Digital</span>
+        <span class="skill-tag">Growth Marketing</span>
+        <span class="skill-tag">Content Marketing</span>
+        <span class="skill-tag">Content & Community</span>
+        <span class="skill-tag">Paid Media</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="container">
+    <p class="section-label reveal">Sobre mí</p>
+    <h2 class="section-title reveal">Estrategia digital<br><em>con propósito.</em></h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          Soy <strong>Analista de Marketing</strong> con más de 15 años de experiencia en productos digitales y estrategias de contenido. A lo largo de mi carrera trabajé con marcas de entretenimiento, infancia, tecnología y medios, construyendo comunidades leales.
+        </p>
+        <p>
+          Me especializo en entender la <strong>voz de cada marca</strong> y traducirla en contenido que genera conversación real. Desde campañas pagas hasta calendarios editoriales, mi enfoque siempre parte de los datos y termina en las personas.
+        </p>
+        <p>
+          Con mis conocimientos en <strong>paid media</strong>, combino intuición creativa con análisis de métricas para tomar decisiones que impactan de verdad.
+        </p>
+        <p>
+          Hoy busco incorporarme <strong>en relación de dependencia</strong> a un equipo de Marketing que valore esa combinación entre estrategia, datos y creatividad.
+        </p>
+      </div>
+
+      <div class="skills-sidebar reveal">
+        <div class="skill-group">
+          <p class="skill-group-title">Plataformas</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Instagram</span>
+            <span class="skill-tag">Facebook</span>
+            <span class="skill-tag">LinkedIn</span>
+            <span class="skill-tag">TikTok</span>
+            <span class="skill-tag">YouTube</span>
+            <span class="skill-tag">Twitter/X</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-title">Herramientas</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Meta Ads</span>
+            <span class="skill-tag">Google Ads</span>
+            <span class="skill-tag">DV360</span>
+            <span class="skill-tag">Google Analytics</span>
+            <span class="skill-tag">Data Studio</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Claude</span>
+            <span class="skill-tag">Gemini AI</span>
+            <span class="skill-tag">ChatGPT</span>
+            <span class="skill-tag">Nano Banana</span>
+            <span class="skill-tag">Cap Cut</span>
+            <span class="skill-tag">Canva</span>
+            <span class="skill-tag">Hootsuite</span>
+            <span class="skill-tag">Mailchimp</span>
+            <span class="skill-tag">Doppler</span>
+            <span class="skill-tag">Mailup</span>
+            <span class="skill-tag">Trello</span>
+            <span class="skill-tag">Asana</span>
+            <span class="skill-tag">Notion</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-title">Sectores</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Entretenimiento</span>
+            <span class="skill-tag">Infancia</span>
+            <span class="skill-tag">Gaming</span>
+            <span class="skill-tag">Tecnología</span>
+            <span class="skill-tag">Medios</span>
+            <span class="skill-tag">Seguros</span>
+            <span class="skill-tag">Música</span>
+            <span class="skill-tag">Inmobiliarias</span>
+            <span class="skill-tag">Servicios</span>
+            <span class="skill-tag">Fintech</span>
+            <span class="skill-tag">B2B</span>
+            <span class="skill-tag">B2C</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-title">Idiomas</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Español (nativo)</span>
+            <span class="skill-tag">Portugués</span>
+            <span class="skill-tag">Inglés</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience-section" id="experience">
+  <div class="container">
+    <p class="section-label reveal">Trayectoria</p>
+    <h2 class="section-title reveal">Experiencia<br><em>profesional.</em></h2>
+    <div class="experience-list">
+
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <p class="exp-company">BairesDev · Contrato temporal</p>
+          <p class="exp-period">Oct. 2025 – Actualidad · 11 meses · Remoto</p>
+        </div>
+        <div>
+          <h3 class="exp-role">Analista de Marketing y Branding</h3>
+          <p class="exp-description">Asesora estratégica a cargo de liderar la presencia digital, el posicionamiento de marca y la ejecución de campañas para clientes regionales y de EE. UU. Coordiné directamente calendarios de contenido, campañas de performance marketing en conjunto con agencias externas, y estrategias de influencer marketing.</p>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <p class="exp-company">Qualia · Grupo Petersen</p>
+          <p class="exp-period">Dic 2022 – Ene 2025</p>
+        </div>
+        <div>
+          <h3 class="exp-role">Analista de Marketing Digital</h3>
+          <p class="exp-description">Lideré la estrategia integral de comunicación y marketing digital de la compañía con foco en los objetivos de negocio, garantizando una presencia de marca consistente y eficaz.</p>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <p class="exp-company">Beyond Media Agency</p>
+          <p class="exp-period">Ene 2022 – Dic 2022</p>
+        </div>
+        <div>
+          <h3 class="exp-role">Paid Media Specialist</h3>
+          <p class="exp-description">Implementación y optimización de campañas de branding y performance en Meta Ads, Google Ads y DV360. Responsable del control presupuestario y cumplimiento de KPIs para consumo masivo.</p>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <p class="exp-company">Leader Entertainment</p>
+          <p class="exp-period">Jul 2019 – Ene 2022</p>
+        </div>
+        <div>
+          <h3 class="exp-role">Social Media Coordinator</h3>
+          <p class="exp-description">Lideré ecosistemas digitales con comunidades de +16M de seguidores, diseñando estrategias de Growth y Branding con impacto directo en la monetización y expansión de mercados internacionales (LatAm, Brasil, EE. UU., Rusia).</p>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <p class="exp-company">Leader Entertainment</p>
+          <p class="exp-period">Nov 2013 – Abr 2019</p>
+        </div>
+        <div>
+          <h3 class="exp-role">Social Media & Content Manager</h3>
+          <p class="exp-description">Responsable de la estrategia para las redes sociales y blogs de Mundo Gaturro Latam y Brasil, Plim Plim y otros productos infantiles.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects-section" id="projects">
+  <div class="container">
+    <p class="section-label reveal">Portfolio</p>
+    <h2 class="section-title reveal">Proyectos<br><em>destacados.</em></h2>
+  </div>
+  <div class="projects-grid">
+    <a href="https://www.behance.net/gallery/221718537/Analista-de-Marketing-Digital" target="_blank" class="project-card reveal">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/faab5b221718537.67d983d570be1.jpg" alt="Qualia — Analista de Marketing Digital" class="project-thumb">
+      <p class="project-tag">Seguros · E-Commerce</p>
+      <h3 class="project-title">Analista de Marketing Digital — Qualia</h3>
+      <p class="project-views">Estrategia digital para aseguradora del Grupo Petersen</p>
+      <div class="project-metrics">
+        <div class="metric"><div class="metric-num">20M+</div><div class="metric-label">Views TikTok</div></div>
+        <div class="metric"><div class="metric-num">3</div><div class="metric-label">Redes gestionadas</div></div>
+        <div class="metric"><div class="metric-num">35K+</div><div class="metric-label">Seguidores totales</div></div>
+      </div>
+    </a>
+
+    <a href="https://www.behance.net/gallery/84715907/Social-Media-Manager" target="_blank" class="project-card reveal">
+      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/25af6b84715907.Y3JvcCw5MDAsNzAzLDAsOTg.jpg" alt="Social Media Manager" class="project-thumb">
+      <p class="project-tag">Social Media</p>
+      <h3 class="project-title">Social Media Manager</h3>
+      <p class="project-views">Gestión integral de redes para múltiples marcas</p>
+      <div class="project-metrics">
+        <div class="metric"><div class="metric-num">+180%</div><div class="metric-label">Crecimiento seguidores</div></div>
+        <div class="metric"><div class="metric-num">3.2×</div><div class="metric-label">Alcance orgánico</div></div>
+        <div class="metric"><div class="metric-num">8.4%</div><div class="metric-label">Engagement rate</div></div>
+      </div>
+    </a>
+
+    <a href="https://www.behance.net/gallery/84719545/La-Granja-de-Zenon" target="_blank" class="project-card reveal">
+      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/d83d5f84719545.Y3JvcCw0MDQsMzE2LDI0OCwyOTI.jpg" alt="La Granja de Zenón" class="project-thumb">
+      <p class="project-tag">Entretenimiento Infantil</p>
+      <h3 class="project-title">La Granja de Zenón</h3>
+      <p class="project-views">Estrategia digital para marca infantil líder</p>
+      <div class="project-metrics">
+        <div class="metric"><div class="metric-num">+250K</div><div class="metric-label">Fans alcanzados</div></div>
+        <div class="metric"><div class="metric-num">12%</div><div class="metric-label">Engagement rate</div></div>
+        <div class="metric"><div class="metric-num">+90%</div><div class="metric-label">Interacciones</div></div>
+      </div>
+    </a>
+
+    <a href="https://www.behance.net/gallery/53302661/Community-Manager-en-Papumba" target="_blank" class="project-card reveal">
+      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/14996d53302661.Y3JvcCw3MDEsNTQ4LDk5LDE3NQ.jpg" alt="Community Manager en Papumba" class="project-thumb">
+      <p class="project-tag">Apps Educativas</p>
+      <h3 class="project-title">Community Manager en Papumba</h3>
+      <p class="project-views">Comunidad para app educativa infantil</p>
+      <div class="project-metrics">
+        <div class="metric"><div class="metric-num">+40K</div><div class="metric-label">Miembros activos</div></div>
+        <div class="metric"><div class="metric-num">4.8★</div><div class="metric-label">Rating en tiendas</div></div>
+        <div class="metric"><div class="metric-num">-65%</div><div class="metric-label">Quejas sin respuesta</div></div>
+      </div>
+    </a>
+
+    <a href="https://www.behance.net/gallery/84716339/CumbiaTube" target="_blank" class="project-card reveal">
+      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/6721bc84716339.Y3JvcCw5NjAsNzUwLDAsMTA0.png" alt="CumbiaTube" class="project-thumb">
+      <p class="project-tag">Música & Cultura</p>
+      <h3 class="project-title">CumbiaTube</h3>
+      <p class="project-views">Plataforma de contenido musical latinoamericano</p>
+      <div class="project-metrics">
+        <div class="metric"><div class="metric-num">+120K</div><div class="metric-label">Reproducciones</div></div>
+        <div class="metric"><div class="metric-num">2.1×</div><div class="metric-label">Retención usuarios</div></div>
+        <div class="metric"><div class="metric-num">+75%</div><div class="metric-label">Suscriptores</div></div>
+      </div>
+    </a>
+
+    <a href="https://www.behance.net/gallery/84716109/Mundo-Gaturro" target="_blank" class="project-card reveal">
+      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/5bdb9384716109.Y3JvcCw0MDQsMzE2LDI1OSwyOTI.jpg" alt="Mundo Gaturro" class="project-thumb">
+      <p class="project-tag">Entretenimiento</p>
+      <h3 class="project-title">Mundo Gaturro</h3>
+      <p class="project-views">Gestión de comunidad para marca icónica argentina</p>
+      <div class="project-metrics">
+        <div class="metric"><div class="metric-num">+300K</div><div class="metric-label">Seguidores gestionados</div></div>
+        <div class="metric"><div class="metric-num">9.1%</div><div class="metric-label">Engagement rate</div></div>
+        <div class="metric"><div class="metric-num">+200%</div><div class="metric-label">Alcance de contenido</div></div>
+      </div>
+    </a>
+  </div>
+  <div class="container" style="text-align:center; padding-top: 48px; padding-bottom: 8px;">
+    <a href="https://www.behance.net/camilap" target="_blank" class="btn-ghost" style="color: rgba(255,255,255,0.5); border-color: rgba(255,255,255,0.25); font-size: 14px; letter-spacing: 0.08em;">Ver más proyectos en Behance ↗</a>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="brands-section" id="brands">
+  <div class="container">
+    <p class="section-label reveal">Trayectoria</p>
+    <h2 class="section-title reveal">Marcas con las<br><em>que trabajé.</em></h2>
+  </div>
+  <div class="container">
+    <div class="brands-grid reveal">
+      <div class="brand-tile"><img src="qualia.png" alt="Qualia" loading="lazy"></div>
+      <div class="brand-tile"><img src="el-reino-infantil.png" alt="El Reino Infantil" loading="lazy"></div>
+      <div class="brand-tile"><img src="la-granja-de-zenon.png" alt="La Granja de Zenón" loading="lazy"></div>
+      <div class="brand-tile"><img src="bichikids.png" alt="Bichikids" loading="lazy"></div>
+      <div class="brand-tile"><img src="canciones-del-zoo.png" alt="Canciones del Zoo" loading="lazy"></div>
+      <div class="brand-tile"><img src="cumbiatube.png" alt="CumbiaTube" loading="lazy"></div>
+      <div class="brand-tile"><img src="gilda.png" alt="Gilda" loading="lazy"></div>
+      <div class="brand-tile"><img src="papumba.png" alt="Papumba" loading="lazy"></div>
+      <div class="brand-tile"><img src="plim-plim.png" alt="Plim Plim" loading="lazy"></div>
+      <div class="brand-tile"><img src="mundo-gaturro.png" alt="Mundo Gaturro" loading="lazy"></div>
+      <div class="brand-tile"><img src="qb9.png" alt="QB9" loading="lazy"></div>
+      <div class="brand-tile"><img src="grupo-clarin.png" alt="Grupo Clarín" loading="lazy"></div>
+      <div class="brand-tile"><img src="apsot.png" alt="Apsot" loading="lazy"></div>
+      <div class="brand-tile"><img src="pernod-ricard.png" alt="Pernod Ricard" loading="lazy"></div>
+      <div class="brand-tile"><img src="jameson.png" alt="Jameson" loading="lazy"></div>
+      <div class="brand-tile"><img src="absolut.png" alt="Absolut" loading="lazy"></div>
+      <div class="brand-tile"><img src="havana-club.png" alt="Havana Club" loading="lazy"></div>
+      <div class="brand-tile"><img src="beefeater.png" alt="Beefeater" loading="lazy"></div>
+      <div class="brand-tile"><img src="farmacity.png" alt="Farmacity" loading="lazy"></div>
+      <div class="brand-tile"><img src="claro.svg" alt="Claro" loading="lazy"></div>
+      <div class="brand-tile"><img src="gancia.png" alt="Gancia" loading="lazy"></div>
+      <div class="brand-tile"><img src="terma.png" alt="Terma" loading="lazy"></div>
+      <div class="brand-tile"><img src="dog-chow.png" alt="Dog Chow" loading="lazy"></div>
+      <div class="brand-tile"><img src="la-saltena.png" alt="La Salteña" loading="lazy"></div>
+      <div class="brand-tile"><img src="burger-king.png" alt="Burger King" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <p class="section-label reveal">Contacto</p>
+    <h2 class="section-title reveal">Hablemos de la<br><em>próxima oportunidad.</em></h2>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-intro reveal">
+          Estoy en búsqueda activa de nuevas oportunidades en relación de dependencia dentro de equipos de Marketing. Si tu empresa está buscando este perfil, escribime — me encantaría conocer más sobre la posición.
+        </p>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/camilapelater/" target="_blank" class="contact-link reveal">
+            <div class="contact-link-left">
+              <span class="contact-link-platform">LinkedIn</span>
+              <span class="contact-link-name">camilapelater</span>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+          <a href="https://www.behance.net/camilap" target="_blank" class="contact-link reveal">
+            <div class="contact-link-left">
+              <span class="contact-link-platform">Behance</span>
+              <span class="contact-link-name">camilap</span>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+          <a href="http://medium.com/@camiy2k" target="_blank" class="contact-link reveal">
+            <div class="contact-link-left">
+              <span class="contact-link-platform">Medium</span>
+              <span class="contact-link-name">@camiy2k</span>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+          <a href="#" class="contact-link reveal">
+            <div class="contact-link-left">
+              <span class="contact-link-platform">Ubicación</span>
+              <span class="contact-link-name">Buenos Aires, Argentina</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-area reveal">
+        <h3 class="form-title">Enviame un mensaje</h3>
+        <p class="form-subtitle">Respondo en menos de 48hs hábiles.</p>
+        <div class="form-group">
+          <label class="form-label">Tu nombre</label>
+          <input type="text" class="form-input" placeholder="María García">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input" placeholder="maria@empresa.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mensaje</label>
+          <textarea class="form-textarea" placeholder="Contame sobre la posición..."></textarea>
+        </div>
+        <button class="form-submit">Enviar mensaje</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-name">Camila Pelater</span>
+      <span class="footer-copy">© 2026 · Buenos Aires, Argentina</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      if (!id) return;
+      e.preventDefault();
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
